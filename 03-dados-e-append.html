@@ -18,9 +18,11 @@
 
 <!-- PARTE 1: select + append  -->
     <script type="text/javascript">
-      d3.select('.row') // .xpto == elemento da classe xpto
-      .append('p')
+      const row = d3.select('.row');
+      row.append('p')
       .text('Sou um parágrafo recém-criado!');
+      row.append('p')
+      .text('E eu sou outro!');
     </script>
 
 <!-- PARTE 2: dados -->
