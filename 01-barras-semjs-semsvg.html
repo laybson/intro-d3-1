@@ -6,42 +6,45 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <style>
     .chart div {
-      font: 10px sans-serif;
-      background-color: steelblue;
+      font: 10px helvetica;
+      background-color: #880000;
       text-align: right;
-      padding: 3px;
+      padding: 10px;
       margin: 1px;
       color: white;
+      font-weight: bold;
     }
 
     /* Seletores dinâmicos: */
-/*     .chart div:hover {
-      background-color: yellow;
-      color: steelblue;
-    } */
+     .chart div:hover {
+      background-color: steelblue;
+      color: white;
+    }
   </style>
 </head>
 
-<div class="container">
-  <div class="row">
-    <h3>Um gráfico estático só em html</h3>
-    <p>
-      Divs, com os dados codificados no estilo das barras usando css.
-    </p>
-  </div>
-  <div class="row">
-    <div class="chart">
-      <div style="width: 40px;">4</div>
-      <div style="width: 80px;">8</div>
-      <div style="width: 150px;">15</div>
-      <div style="width: 160px;">16</div>
-      <div style="width: 230px;">23</div>
-      <div style="width: 420px;">42</div>
+<body>
+  <div class="container">
+    <div class="row">
+      <h3>Um gráfico estático só em html</h3>
+      <p>
+        Divs, com os dados codificados no estilo das barras usando css.
+      </p>
+    </div>
+    <div class="row">
+      <div class="chart">
+        <div style="width: 40px;">4</div>
+        <div style="width: 80px;">8</div>
+        <div style="width: 150px;">15</div>
+        <div style="width: 160px;">16</div>
+        <div style="width: 230px;">23</div>
+        <div style="width: 420px;">42</div>
+      </div>
+    </div>
+    <div class="row">
+      <p>
+        Experimente com o css dos elementos nessa página. Crtl + shift + I, inspecione um elemento do DOM e mexa no css dele. E/ou mexa no css desse html.
+      </p>
     </div>
   </div>
-  <div class="row">
-    <p>
-      Experimente com o css dos elementos nessa página. Crtl + shift + I, inspecione um elemento do DOM e mexa no css dele. E/ou mexa no css desse html.
-    </p>
-  </div>
-</div>
+</body>
