@@ -106,13 +106,8 @@
     }
 
     d3.json('dados/boqueirao-por-mes.json', function(dados) {
-      console.log("provavelmente acontece depois")
-      console.log(typeof(dados.mes));
       desenhaBarras(dados);
     });
-
-    console.log("provavelmente acontece primeiro") // me apague quando entender.
-
     /*
     * Assim como a função d3.tsv, existe a d3.csv e a d3.json
     * Em todas, o primeiro parâmetro é uma URL e o segundo a função que
