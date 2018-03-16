@@ -43,7 +43,7 @@
 			<li><a href="networks4.html">4</a></li>
 		</ol>
 		<header>
-			<h1>A preferida do Brasil</h1>
+			<h1>Angra's Connections</h1>
 		</header>
 
 		<div id="chart"></div>
@@ -76,8 +76,8 @@
 	<script src="js/d3.v4.min.js"></script>
 	<script>
 		var
-		    width = 1000,
-		    height = 1000;
+		    width = 1280,
+		    height = 1280;
 
 		var svg = d3.select("#chart")
 				.append("svg")
@@ -85,14 +85,14 @@
 				.attr('viewBox', '0 0 '+width+' '+height)
 				.attr('width', '100%');
 
-		var color = d3.scaleOrdinal(d3.schemeCategory20);
+		// var color = d3.scaleOrdinal(d3.schemeCategory20);
 
 		var simulation = d3.forceSimulation()
 		    .force("link", d3.forceLink().id(function(d) { return d.id; }))
 		    .force("charge", d3.forceManyBody())
 		    .force("center", d3.forceCenter(width / 2, height / 2));
 
-		d3.json("artistas-semelhantes.json", function(error, graph) {
+		d3.json("angra.json", function(error, graph) {
 		  if (error) throw error;
 
 			console.dir(graph.edges);
@@ -109,8 +109,8 @@
 		    .selectAll("circle")
 		    	.data(graph.nodes)
 		    .enter().append("circle")
-		      .attr("r", 5)
-		      .attr("fill", function(d) { return color(d.group); })
+		      .attr("r", function(d) { return d.size/10; })
+		      .attr("fill", function(d) { return d.color; })
 		      .call(d3.drag()
 		          .on("start", dragstarted)
 		          .on("drag", dragged)
